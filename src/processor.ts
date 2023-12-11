@@ -18,10 +18,8 @@ patchStore()
 
 export const processor = new EvmBatchProcessor()
     .setDataSource({
-        archive: lookupArchive('eth-mainnet'),
-        chain: 'https://rpc.ankr.com/eth',
+        archive: lookupArchive('eth-mainnet')
     })
-    .setFinalityConfirmation(75)
     .setFields({
         transaction: {
             from: true,

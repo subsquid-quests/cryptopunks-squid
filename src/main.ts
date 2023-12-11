@@ -14,7 +14,7 @@ const state = {
     hasSavedAllImages: false,
 }
 
-processor.run(new TypeormDatabase({supportHotBlocks: true}), async (ctx) => {
+processor.run(new TypeormDatabase({supportHotBlocks: false}), async (ctx) => {
     // making queue
     ctx.log.debug('Making queue...')
     const queue = new SimpleQueue()
@@ -46,12 +46,12 @@ processor.run(new TypeormDatabase({supportHotBlocks: true}), async (ctx) => {
             ]),
     })
     // fetch metadata images if needed
-    const lastBlock = ctx.blocks[ctx.blocks.length - 1].header
-    if (
-        lastBlock.height > BLOCK_HEIGHT_TO_FETCH_PUNK_IMAGES &&
-        !state.hasSavedAllImages
-    ) {
-        state.hasSavedAllImages = await fetchAndSavePunkImages(ctx, lastBlock)
-    }
+    // const lastBlock = ctx.blocks[ctx.blocks.length - 1].header
+    // if (
+    //     lastBlock.height > BLOCK_HEIGHT_TO_FETCH_PUNK_IMAGES &&
+    //     !state.hasSavedAllImages
+    // ) {
+    //     state.hasSavedAllImages = await fetchAndSavePunkImages(ctx, lastBlock)
+    // }
     ctx.log.debug('Done.')
 })
