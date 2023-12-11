@@ -1,0 +1,34 @@
+manifestVersion: subsquid.io/v0.1
+name: yat1ma30-cryptopunks
+version: 1
+description: 'The very first evm squid from manifest  '
+build:
+deploy:
+    addons:
+        postgres:
+    processor:
+        cmd:
+            - node
+            - lib/main
+    api:
+        cmd:
+            - npx
+            - squid-graphql-server
+            - '--dumb-cache'
+            - in-memory
+            - '--dumb-cache-ttl'
+            - '1000'
+            - '--dumb-cache-size'
+            - '100'
+            - '--dumb-cache-max-age'
+            - '1000'
+scale:
+#  dedicated: false
+  dedicated: true
+  processor:
+    profile: large
+  api:
+    profile: large
+  addons:
+    postgres:
+      profile: large

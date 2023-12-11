@@ -1,0 +1,11 @@
+export enum EventType {
+    ASSIGN = "ASSIGN",
+    TRANSFER = "TRANSFER",
+    ASK_CREATED = "ASK_CREATED",
+    ASK_REMOVED = "ASK_REMOVED",
+    BID_CREATED = "BID_CREATED",
+    BID_REMOVED = "BID_REMOVED",
+    SALE = "SALE",
+    WRAP = "WRAP",
+    UNWRAP = "UNWRAP",
+}
