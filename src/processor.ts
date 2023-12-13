@@ -18,7 +18,7 @@ patchStore()
 
 export const processor = new EvmBatchProcessor()
     .setDataSource({
-        archive: lookupArchive('eth-mainnet'),
+        archive: 'http://localhost:8000/network/ethereum-mainnet',
         chain: {
             url: 'https://rpc.ankr.com/eth',
             rateLimit: 10
