@@ -12,7 +12,7 @@ w<p align="center">
 
 [Subsquid Network Docs](https://docs.subsquid.io/subsquid-network/)
 
-# Deploy a Cryptopunks squid
+# Run a Cryptopunks squid
 
 This is an updated version of the quest to run a squid migrated from the [Cryptopunks subgraph](https://thegraph.com/explorer/subgraphs/2hTKKMwLsdfJm9N7gUeajkgg8sdJwky56Zpkvg8ZcyP8) by [yat1ma30](https://github.com/yat1ma30), one of the winners of the [migration quest](https://github.com/subsquid-quests/cryptopunks-subgraph-migration). You can find the original repository [here](https://github.com/yat1ma30/subsquid-cryptopunks-migration).
 
