@@ -16,6 +16,8 @@ w<p align="center">
 
 This is an updated version of the quest to run a squid migrated from the [Cryptopunks subgraph](https://thegraph.com/explorer/subgraphs/2hTKKMwLsdfJm9N7gUeajkgg8sdJwky56Zpkvg8ZcyP8) by [yat1ma30](https://github.com/yat1ma30), one of the winners of the [migration quest](https://github.com/subsquid-quests/cryptopunks-subgraph-migration). You can find the original repository [here](https://github.com/yat1ma30/subsquid-cryptopunks-migration).
 
+Note: you'll need to have at least 10 tSQD to complete this quest. Obtain them by doing other quests first.
+
 ### I. Install dependencies: Node.js, Docker, Git.
 
 <details>
