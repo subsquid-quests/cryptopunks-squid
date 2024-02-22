@@ -174,35 +174,20 @@ A healthy response should look similar to
    ```
    The command should output lines like these:
    ```
-   [eth-processor] {"level":2,"time":1705681499120,"ns":"sqd:commands","msg":"PROCESS:ETH"}
-   [moonbeam-processor] {"level":2,"time":1705681499148,"ns":"sqd:commands","msg":"PROCESS:MOONBEAM"}
-   [base-processor] {"level":2,"time":1705681499155,"ns":"sqd:commands","msg":"PROCESS:BASE"}
-   [bsc-processor] {"level":2,"time":1705681499163,"ns":"sqd:commands","msg":"PROCESS:BSC"}
-   [eth-processor] 01:24:59 INFO  sqd:processor processing blocks from 955722
-   [base-processor] 01:24:59 INFO  sqd:processor processing blocks from 1208926
-   [moonbeam-processor] 01:24:59 INFO  sqd:processor processing blocks from 166845
-   [bsc-processor] 01:24:59 INFO  sqd:processor processing blocks from 16996735
-   [eth-processor] 01:24:59 INFO  sqd:processor using archive data source
-   [eth-processor] 01:24:59 INFO  sqd:processor prometheus metrics are served at port 34253
-   [base-processor] 01:24:59 INFO  sqd:processor using archive data source
-   [base-processor] 01:24:59 INFO  sqd:processor prometheus metrics are served at port 40205
-   [moonbeam-processor] 01:24:59 INFO  sqd:processor using archive data source
-   [moonbeam-processor] 01:24:59 INFO  sqd:processor prometheus metrics are served at port 33691
-   [bsc-processor] 01:24:59 INFO  sqd:processor using archive data source
-   [bsc-processor] 01:24:59 INFO  sqd:processor prometheus metrics are served at port 41199
-   [moonbeam-processor] 01:25:00 INFO  sqd:processor:mapping Got 0 burn txs and 0 USDT transfers
-   [moonbeam-processor] 01:25:00 INFO  sqd:processor 171971 / 5325985, rate: 3823 blocks/sec, mapping: 2729 blocks/sec, 1364 items/sec, eta: 23m
-   [base-processor] 01:25:00 INFO  sqd:processor:mapping Got 0 burn txs and 0 USDT transfers
-   [base-processor] 01:25:00 INFO  sqd:processor 1477379 / 9442733, rate: 175758 blocks/sec, mapping: 8032 blocks/sec, 1339 items/sec, eta: 45s
-   [base-processor] 01:25:02 INFO  sqd:processor:mapping Got 1 burn txs and 0 USDT transfers
+   [api] 23:33:48 WARN  sqd:graphql-server enabling dumb in-memory cache (size: 100mb, ttl: 1000ms, max-age: 1000ms)
+   [api] 23:33:48 INFO  sqd:graphql-server listening on port 4350
+   [processor] 23:33:49 INFO  sqd:processor processing blocks from 11000000
+   [processor] 23:33:49 INFO  sqd:processor using archive data source
+   [processor] 23:33:49 INFO  sqd:processor prometheus metrics are served at port 36935
+   [processor] 23:33:52 INFO  sqd:processor 11005159 / 18377705, rate: 1756 blocks/sec, mapping: 352 blocks/sec, 311 items/sec, eta: 1h 10m
+   [processor] 23:33:57 INFO  sqd:processor 11010199 / 18377705, rate: 1735 blocks/sec, mapping: 488 blocks/sec, 428 items/sec, eta: 1h 11m
    ```
-
    The squid should sync in about 12 hours.
 
 > [!TIP]
 > Do not worry if the squid fails: any progress it made is saved. Simply restart it if it happens.
 
-When done, stop the squid processor with Ctrl-C, then stop and remove the query gateway container with
+When done, stop the squid processor with Ctrl-C, then stop and remove the auxiliary containers with
 ```bash
 sqd down
 ```
