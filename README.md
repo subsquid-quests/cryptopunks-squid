@@ -98,10 +98,10 @@ A healthy response should look similar to
 
 1. Open a terminal, navigate to any folder for which you have write permissions and run the following commands to retrieve the squid, enter its folder and install dependencies:
    ```bash
-   sqd init uniform-load-squid -t https://github.com/subsquid-quests/network-test-one-uniform-load-squid
+   sqd init cryptopunks-squid -t https://github.com/subsquid-quests/cryptopunks-squid
    ```
    ```bash
-   cd uniform-load-squid
+   cd cryptopunks-squid
    ```
    ```bash
    npm ci
