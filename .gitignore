@@ -1,8 +1,4 @@
 /node_modules
 /lib
-/builds
-
-/**Versions.json
-
-# IDE files
-/.idea
+/query-gateway/keys/*.key
+/query-gateway/allocations.db
